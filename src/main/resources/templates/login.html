@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form class="form-signin" method="post" th:action="@{/login}">
+        <div class="login_title">
+            <h4>Login</h4>
+        </div>
+        <div class="login_input">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                required>
+        </div>
+        <div class="login_input input_password">
+            <label for="password">Contraseña</label>
+            <div class="container_input-button">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </div>
+        <input name="_csrf" type="hidden" value="63155ace-bc25-48a4-b881-1ad730b9268b" />
+        <div class="login_submit">
+            <button class="" type="submit">Inicia sesion</button>
+        </div>
+    </form>
+</body>
+</html>

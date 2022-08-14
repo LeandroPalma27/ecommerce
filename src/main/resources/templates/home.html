@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Ecommerce</h1>
+    <div sec:authorize="isAuthenticated()">
+        <form id="logoutForm" class="form-logout" th:action="@{/logout}" method="post">
+            <input name="_csrf" type="hidden" value="63155ace-bc25-48a4-b881-1ad730b9268b" />
+            <button onclick="document.getElementById('logoutForm').submit()" class="btn btn-outline">Cerrar sesion</button>
+        </form>
+    </div>
 </body>
 </html>
