@@ -29,7 +29,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
                 .and()
                 .formLogin().loginPage("/login")
                 .and()
-                .logout()
+                .logout().logoutSuccessUrl("/")
                 .and()
                 .sessionManagement().maximumSessions(1);
     }
